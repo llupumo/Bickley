@@ -114,6 +114,8 @@ for A, q_c2 in pairs:
     c2 = q_c2*u #0.461*u
     q_c1 = (c2/u-(0.461-0.205))  #
     #q_c1 = 0.205
+    #q_c1 = (c2/u-(0.461-0.205))  #
+    q_c1 = 0.205
     c1=q_c1*u
     formatted_A = f"{A:.8f}"
     formatted_c2divu = f"{q_c2:.8f}"
@@ -151,7 +153,8 @@ for A, q_c2 in pairs:
 
 
                 
-    scipy.io.savemat("/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_cdivU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".mat", {'u': U, 'v': V, 'x': x, 'y': y, 't': time_data, 'A' : A, 'c2divu' : q_c2, 'c1divu' : q_c1 })
+    #scipy.io.savemat("/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_cdivU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".mat", {'u': U, 'v': V, 'x': x, 'y': y, 't': time_data, 'A' : A, 'c2divu' : q_c2, 'c1divu' : q_c1 })
+    scipy.io.savemat("/home/llu/Desktop/LCS_graph/Bickley/flow/Bickley_A_"+formatted_A+"_cdivU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".mat", {'u': U, 'v': V, 'x': x, 'y': y, 't': time_data, 'A' : A, 'c2divu' : q_c2, 'c1divu' : q_c1 })
 
     x.reshape(1,x.shape[0])
     y.reshape(1,y.shape[0])
@@ -415,7 +418,8 @@ for A, q_c2 in pairs:
     ax.set_title("Forward FTLE: A: "+formatted_A+"  c/U: "+formatted_c2divu+"  c1/U: "+formatted_c1divu, fontsize=10)
     # Save the figure with consistent size and no extra whitespace
     plt.savefig(
-        "/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
+        #"/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
+        "/home/llu/Desktop/LCS_graph/Bickley/flow/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
         bbox_inches='tight',  # Ensures no extra whitespace
         pad_inches=0.1        # Adds a small padding around the figure
     )
