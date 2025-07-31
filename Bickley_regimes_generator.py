@@ -419,7 +419,7 @@ for A, q_c2 in pairs:
     # Save the figure with consistent size and no extra whitespace
     plt.savefig(
         #"/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
-        "/home/llu/Desktop/LCS_graph/Bickley/flow/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
+        "/home/llu/Desktop/LCS_graph/Bickley/flow_qc1_qc2/Bickley_A_"+formatted_A+"_c2divU_"+formatted_c2divu+"_c1divU_"+formatted_c1divu+".png",
         bbox_inches='tight',  # Ensures no extra whitespace
         pad_inches=0.1        # Adds a small padding around the figure
     )
