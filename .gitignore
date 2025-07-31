@@ -8,3 +8,5 @@ __pycache__/
 # Ignore data files
 *.csv
 *.nc
+*.mat
+*.png
